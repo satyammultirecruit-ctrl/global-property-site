@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Projects</title>
+
+<style>
+body {margin:0;font-family:Georgia;background:black;color:white;text-align:center}
+
+.tabs {display:flex;justify-content:center;gap:20px;margin:40px}
+.tab {padding:12px 25px;border:1px solid gold;cursor:pointer}
+.tab:hover {background:gold;color:black}
+
+.section {display:none;padding:40px}
+.active {display:block}
+
+.cards {display:flex;flex-wrap:wrap;justify-content:center;gap:30px}
+
+.card {background:#111;width:300px;border-radius:10px;overflow:hidden;transition:0.3s}
+.card:hover {transform:scale(1.05)}
+
+.card img {width:100%;height:200px;object-fit:cover}
+.card h3 {color:gold}
+</style>
+
+<script>
+function showTab(id){
+document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+</script>
+
+</head>
+
+<body>
+
+<h1 style="color:gold;margin-top:30px">Global Property Portfolio</h1>
+
+<div class="tabs">
+<div class="tab" onclick="showTab('dubai')">Dubai</div>
+<div class="tab" onclick="showTab('australia')">Australia</div>
+<div class="tab" onclick="showTab('brazil')">Brazil</div>
+</div>
+
+<div id="dubai" class="section active">
+<div class="cards">
+<div class="card"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"><h3>Luxury Hotel — AED 450M</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688"><h3>Premium Mall — AED 320M</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb"><h3>Apartments — AED 2.5M</h3></div>
+</div>
+</div>
+
+<div id="australia" class="section">
+<div class="cards">
+<div class="card"><img src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8"><h3>Resort Hotel — AUD 180M</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"><h3>Mall — AUD 95M</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6"><h3>Apartments — AUD 900K</h3></div>
+</div>
+</div>
+
+<div id="brazil" class="section">
+<div class="cards">
+<div class="card"><img src="https://images.unsplash.com/photo-1507089947367-19c1da9775ae"><h3>Beach Hotel — BRL 210M</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1460317442991-0ec209397118"><h3>Mall — BRL 130M</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2"><h3>Apartments — BRL 750K</h3></div>
+</div>
+</div>
+
+</body>
+</html>
