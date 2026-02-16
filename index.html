@@ -4,43 +4,69 @@
 <title>Global Property Group</title>
 
 <style>
-body {margin:0;font-family:Georgia, serif;color:white}
+body {
+margin:0;
+font-family:Georgia, serif;
+background:black;
+color:white;
+}
 
 .hero {
-background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
+background:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1') center/cover no-repeat;
 height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+padding:20px;
 }
 
-.hero h1 {font-size:60px;color:gold}
+.hero h1 {
+font-size:60px;
+color:gold;
+letter-spacing:2px;
+}
+
+.hero p {
+font-size:20px;
+max-width:700px;
+}
 
 .button {
-margin-top:20px;
-padding:15px 30px;
+margin-top:25px;
+padding:15px 35px;
 background:gold;
 color:black;
 border:none;
 cursor:pointer;
+font-weight:bold;
 }
 
 .section {
-background:#111;
 padding:80px;
+background:#111;
 text-align:center;
+}
+
+.section h2 {
+color:gold;
+}
+
+form {
+max-width:500px;
+margin:auto;
+text-align:left;
 }
 
 input, select, textarea {
 width:100%;
-padding:10px;
+padding:12px;
 margin-bottom:15px;
 border:none;
 }
-
-form {max-width:500px;margin:auto;text-align:left}
 </style>
 
 </head>
@@ -48,16 +74,25 @@ form {max-width:500px;margin:auto;text-align:left}
 <body>
 
 <div class="hero">
+
 <h1>Global Property Group</h1>
-<p>Luxury Developments Across Dubai, Australia & Brazil</p>
-<a href="projects.html"><button class="button">Explore Projects</button></a>
+
+<p>
+Curating exceptional real estate opportunities for global investors
+across premier markets.
+</p>
+
+<a href="projects.html"><button class="button">Explore Portfolio</button></a>
+
 </div>
 
 <div class="section">
 
-<h2 style="color:gold">Private Investor Enquiry</h2>
+<h2>Private Investor Enquiry</h2>
 
-<p>Submit your details and our team will reach out.</p>
+<p>
+Submit your details to receive access to confidential opportunities.
+</p>
 
 <form>
 
@@ -67,24 +102,17 @@ form {max-width:500px;margin:auto;text-align:left}
 <label>Email</label>
 <input type="email">
 
-<label>Country Interest</label>
+<label>Region of Interest</label>
 <select>
 <option>Dubai</option>
 <option>Australia</option>
 <option>Brazil</option>
 </select>
 
-<label>Investment Size</label>
-<select>
-<option>$500K — $1M</option>
-<option>$1M — $5M</option>
-<option>$5M+</option>
-</select>
-
 <label>Message</label>
 <textarea></textarea>
 
-<button class="button">Submit Enquiry</button>
+<button class="button">Request Access</button>
 
 </form>
 
