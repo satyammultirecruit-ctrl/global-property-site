@@ -2,32 +2,86 @@
 <html>
 <head>
 <title>Global Property Group</title>
+
 <style>
-body {margin:0;font-family:Georgia;background:#000;color:white;text-align:center}
-.hero {padding:120px 20px;background:#111}
-h1 {color:gold}
-.section {padding:60px}
-footer {padding:20px;color:#888}
+body {
+  margin:0;
+  font-family:Georgia, serif;
+  background:black;
+  color:white;
+}
+
+.hero {
+  background:url('https://images.unsplash.com/photo-1505691938895-1758d7feb511') center/cover no-repeat;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1 {
+  font-size:60px;
+  color:gold;
+}
+
+.hero p {
+  font-size:20px;
+}
+
+.section {
+  padding:80px 40px;
+  text-align:center;
+}
+
+.section.dark {
+  background:#111;
+}
+
+h2 {
+  color:gold;
+}
+
+.button {
+  margin-top:20px;
+  padding:15px 30px;
+  background:gold;
+  color:black;
+  border:none;
+  font-weight:bold;
+  cursor:pointer;
+}
 </style>
 </head>
+
 <body>
 
 <div class="hero">
 <h1>Global Property Group</h1>
-<p>Private Real Estate Investment Platform</p>
+<p>Luxury Developments Across Dubai</p>
+<button class="button">Explore Projects</button>
 </div>
 
-<div class="section">
+<div class="section dark">
 <h2>Dubai Private Launch</h2>
 <p>Invitation-only unveiling of our flagship development.</p>
 </div>
 
 <div class="section">
-<h2>Contact</h2>
-<p>Email: office@globalpropertygroup.com</p>
+<h2>Our Vision</h2>
+<p>
+We create world-class residences that redefine luxury living,
+combining architecture, innovation, and timeless design.
+</p>
 </div>
 
-<footer>© 2026 Global Property Group</footer>
+<div class="section dark">
+<h2>Contact</h2>
+<p>office@globalpropertygroup.com</p>
+</div>
 
 </body>
 </html>
+
+
