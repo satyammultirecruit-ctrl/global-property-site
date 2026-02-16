@@ -1,43 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Global Property Group</title>
+<title>Global Property Group — Private Office</title>
 
 <style>
+
 body {
 margin:0;
-font-family:Georgia, serif;
+font-family: "Times New Roman", serif;
 background:black;
 color:white;
 }
 
+/* NAV */
+
+.nav {
+position:absolute;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:30px 60px;
+letter-spacing:2px;
+}
+
+.logo {
+color:gold;
+font-size:20px;
+}
+
+.menu a {
+color:white;
+margin-left:30px;
+text-decoration:none;
+}
+
+/* HERO */
+
 .hero {
+height:100vh;
 background:
 linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
 url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1') center/cover no-repeat;
-height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
 }
 
 .hero h1 {
-font-size:60px;
+font-size:70px;
 color:gold;
-letter-spacing:2px;
+letter-spacing:3px;
 }
 
 .hero p {
-font-size:20px;
 max-width:700px;
+font-size:22px;
 }
 
 .button {
-margin-top:25px;
-padding:15px 35px;
+margin-top:30px;
+padding:15px 40px;
 background:gold;
 color:black;
 border:none;
@@ -45,77 +70,108 @@ cursor:pointer;
 font-weight:bold;
 }
 
+/* SECTIONS */
+
 .section {
-padding:80px;
+padding:100px 20px;
 background:#111;
 text-align:center;
 }
 
 .section h2 {
 color:gold;
+font-size:36px;
+margin-bottom:20px;
 }
+
+.section p {
+max-width:700px;
+margin:auto;
+}
+
+/* FORM */
 
 form {
 max-width:500px;
-margin:auto;
+margin:40px auto;
 text-align:left;
 }
 
-input, select, textarea {
+input, textarea, select {
 width:100%;
 padding:12px;
 margin-bottom:15px;
 border:none;
 }
+
+/* FOOTER */
+
+.footer {
+padding:40px;
+text-align:center;
+background:black;
+color:#aaa;
+}
+
 </style>
 
 </head>
 
 <body>
 
+<div class="nav">
+<div class="logo">GLOBAL PROPERTY GROUP</div>
+<div class="menu">
+<a href="projects.html">Portfolio</a>
+<a href="#">Insights</a>
+<a href="#">Private Access</a>
+</div>
+</div>
+
 <div class="hero">
-
-<h1>Global Property Group</h1>
-
+<h1>Private Real Estate Office</h1>
 <p>
-Curating exceptional real estate opportunities for global investors
-across premier markets.
+Access curated investment opportunities across premier global markets.
 </p>
-
-<a href="projects.html"><button class="button">Explore Portfolio</button></a>
-
+<a href="projects.html"><button class="button">View Portfolio</button></a>
 </div>
 
 <div class="section">
-
-<h2>Private Investor Enquiry</h2>
-
+<h2>Our Approach</h2>
 <p>
-Submit your details to receive access to confidential opportunities.
+We partner with global investors to originate and manage high-quality
+real estate opportunities across residential, hospitality, and mixed-use
+developments in select markets.
 </p>
+</div>
+
+<div class="section">
+<h2>Request Private Access</h2>
 
 <form>
-
 <label>Name</label>
 <input type="text">
 
 <label>Email</label>
 <input type="email">
 
-<label>Region of Interest</label>
+<label>Investment Focus</label>
 <select>
-<option>Dubai</option>
-<option>Australia</option>
-<option>Brazil</option>
+<option>Core Assets</option>
+<option>Development Opportunities</option>
+<option>Hospitality</option>
 </select>
 
 <label>Message</label>
 <textarea></textarea>
 
-<button class="button">Request Access</button>
-
+<button class="button">Submit Request</button>
 </form>
 
+</div>
+
+<div class="footer">
+© Global Property Group — Private Office
 </div>
 
 </body>
