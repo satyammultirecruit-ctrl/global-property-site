@@ -1,139 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Global Property Portfolio</title>
+<title>Portfolio</title>
 
 <style>
+
 body {
 margin:0;
-font-family:Georgia, serif;
 background:black;
 color:white;
+font-family: "Times New Roman", serif;
+}
+
+h1 {
 text-align:center;
+color:gold;
+margin:40px;
 }
 
-h1 {color:gold;margin-top:30px}
-
-.tabs {
-display:flex;
-justify-content:center;
+.grid {
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
 gap:20px;
-margin:30px;
-}
-
-.tab {
-padding:12px 25px;
-border:1px solid gold;
-cursor:pointer;
-}
-
-.tab.active {
-background:gold;
-color:black;
-}
-
-.section {
-display:none;
 padding:40px;
-max-width:900px;
-margin:auto;
-text-align:left;
 }
 
-.section.active {display:block}
+.card {
+background:#111;
+border:1px solid #222;
+overflow:hidden;
+}
 
-h2 {color:gold}
+.card img {
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h3 {
+padding:20px;
+color:gold;
+}
+
+.card p {
+padding:0 20px 20px;
+}
+
 </style>
-
-<script>
-function showTab(name){
-document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-document.getElementById(name).classList.add('active');
-document.getElementById(name+'-tab').classList.add('active');
-}
-</script>
 
 </head>
 
 <body>
 
-<h1>Global Property Portfolio</h1>
+<h1>Global Portfolio</h1>
 
-<div class="tabs">
-<div id="dubai-tab" class="tab active" onclick="showTab('dubai')">Dubai</div>
-<div id="australia-tab" class="tab" onclick="showTab('australia')">Australia</div>
-<div id="brazil-tab" class="tab" onclick="showTab('brazil')">Brazil</div>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d">
+<h3>Dubai Waterfront Residences</h3>
+<p>Luxury residential development with private investor participation.</p>
 </div>
 
-<!-- Dubai -->
-<div id="dubai" class="section active">
-<h2>Dubai Development Portfolio</h2>
-
-<p>
-We are actively developing premium residential towers,
-luxury hospitality projects, and waterfront communities
-across Dubai’s prime districts including Downtown,
-Palm Jumeirah, and Dubai Marina.
-</p>
-
-<ul>
-<li>Ultra luxury residential towers</li>
-<li>Private investor villas</li>
-<li>High-end retail destinations</li>
-<li>Five star hospitality projects</li>
-</ul>
-
-<p>
-Our Dubai portfolio focuses on long-term asset creation
-with institutional investment partners.
-</p>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa">
+<h3>Sydney Urban Living</h3>
+<p>Premium mixed-use project in prime metropolitan district.</p>
 </div>
 
-<!-- Australia -->
-<div id="australia" class="section">
-<h2>Australia Development Portfolio</h2>
-
-<p>
-Our Australian operations are focused on mixed-use
-developments across Sydney and Melbourne including
-urban regeneration and premium residential communities.
-</p>
-
-<ul>
-<li>City centre residential developments</li>
-<li>Luxury waterfront apartments</li>
-<li>Commercial retail hubs</li>
-<li>Hospitality and lifestyle projects</li>
-</ul>
-
-<p>
-We partner with local councils and global investors to
-deliver sustainable developments.
-</p>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+<h3>Brazil Coastal Resort</h3>
+<p>Hospitality driven development targeting global tourism growth.</p>
 </div>
 
-<!-- Brazil -->
-<div id="brazil" class="section">
-<h2>Brazil Development Portfolio</h2>
-
-<p>
-In Brazil we are developing beachfront resorts,
-urban residential communities, and retail infrastructure
-in high growth coastal markets.
-</p>
-
-<ul>
-<li>Beachfront hospitality resorts</li>
-<li>Residential masterplanned communities</li>
-<li>Retail and entertainment centres</li>
-<li>Tourism driven developments</li>
-</ul>
-
-<p>
-Our focus is on emerging markets with strong growth
-potential and long term value creation.
-</p>
 </div>
 
 </body>
